@@ -3,7 +3,7 @@ import { generateId } from "../Utils/generateId.js"
 export class House { 
 
     constructor(data) {
-        this.id = data.generateId()
+        this.id = data.generateId || generateId()
         this.year = data.year
         this.name = data.name
         this.bedrooms = data.bedrooms

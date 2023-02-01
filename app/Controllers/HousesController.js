@@ -11,6 +11,7 @@ function _drawHouses(){
   appState.houses.forEach(c => template += c.houseCardTemplate);
   setHTML('listings', template)
 
+
 }
 function _drawHouse(){
   setText('listingModalLabel', `${appState.house.sqft} ${appState.house.price}`)
@@ -33,6 +34,8 @@ export class HousesController {
     setHTML('listingFormLabel', 'cheapest foundations here!')
 
     setHTML('the-actual-form', House.houseForm)
+
+    _drawHouses()
   }
 
   setActiveHouse(houseId){
@@ -49,7 +52,7 @@ export class HousesController {
       const form = event.target
       const formData = getFormData(form)
 
-      carsService.createHome(formData)
+      housesService.createHouse(formData)
 
       console.log(formData)
       form.reset()
