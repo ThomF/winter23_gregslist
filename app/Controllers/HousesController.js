@@ -28,11 +28,11 @@ export class HousesController {
   }
 
   show(){
-    console.log('TODO houses')
+    console.log('')
     setText('add-listing-button', 'New House')
     setHTML('listingFormLabel', 'cheapest foundations here!')
 
-    setHTML('the-actual-form', House.houseForm)
+    setHTML('the-actual-form', House.HouseForm)
 
     _drawHouses()
   }
@@ -65,7 +65,7 @@ export class HousesController {
       const yes = await Pop.confirm(" fosho bro? ")
       if (!yes){return}
 
-      housesService.deleteHouse(carId)
+      housesService.deleteHouse(houseId)
     } catch(error){
       Pop.error(error)
     }

@@ -3,7 +3,7 @@ import { House } from "../Models/House.js"
 import { saveState } from "../Utils/Store.js"
 
 class HousesService {
-    deleteCar(houseId){
+    deleteHouse(houseId){
         let houseIndex = appState.houses.findIndex(c => c.id == houseId)
 
         if (houseIndex == -1){

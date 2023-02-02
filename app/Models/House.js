@@ -26,17 +26,18 @@ export class House {
         </div>
         `
     }
-
+// SECTION this is the delete template
     get houseDetailsTemplate(){
         return`
         <div>
-            <button class="btn btn-danger" data-bs-dismiss="modal onclick="app.housesController.deleteHouse">DELETE</button>
+            <button class="btn btn-danger" data-bs-dismiss="modal" onclick="app.housesController.deleteHouse('${this.id}')">DELETE</button>
         </div>
         
         `
     }
 
-    static houseForm(){
+    static HouseForm () {
+        
         return /*html*/`
     <form onsubmit="app.housesController.handleFormSubmit()">
         <div class="form-floating mb-3">
