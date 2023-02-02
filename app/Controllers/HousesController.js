@@ -1,6 +1,5 @@
 import { appState } from "../AppState.js"
 import { House } from "../Models/House.js"
-import { carsService } from "../Services/CarsService.js"
 import { housesService } from "../Services/HousesService.js"
 import { getFormData } from "../Utils/FormHandler.js"
 import { Pop } from "../Utils/Pop.js"
@@ -57,6 +56,17 @@ export class HousesController {
       console.log(formData)
       form.reset()
     }catch(error){
+      Pop.error(error)
+    }
+  }
+
+  async deleteHouse(houseId){
+    try {
+      const yes = await Pop.confirm(" fosho bro? ")
+      if (!yes){return}
+
+      housesService.deleteHouse(carId)
+    } catch(error){
       Pop.error(error)
     }
   }

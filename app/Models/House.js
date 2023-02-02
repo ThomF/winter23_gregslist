@@ -30,7 +30,7 @@ export class House {
     get houseDetailsTemplate(){
         return`
         <div>
-            <button class="btn btn-danger" data-bs-dismiss="modal onclick="app.houseControllers">
+            <button class="btn btn-danger" data-bs-dismiss="modal onclick="app.housesController.deleteHouse">DELETE</button>
         </div>
         
         `

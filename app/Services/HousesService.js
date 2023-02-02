@@ -3,6 +3,17 @@ import { House } from "../Models/House.js"
 import { saveState } from "../Utils/Store.js"
 
 class HousesService {
+    deleteCar(houseId){
+        let houseIndex = appState.houses.findIndex(c => c.id == houseId)
+
+        if (houseIndex == -1){
+            throw new Error('stop cheating')
+        }
+
+        appState.houses.splice(houseIndex, 1)
+        saveState('houses', appState.houses)
+        appState.emit('houses')
+    }
 
     setActiveHouse(houseId) {
         const house = appState.houses.find(c => c.id == houseId)
