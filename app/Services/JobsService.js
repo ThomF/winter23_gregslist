@@ -1,5 +1,6 @@
-import { appState } from "../AppState"
-import { saveState } from "../Utils/Store"
+import { appState } from "../AppState.js"
+import { Job } from "../Models/Job.js"
+import { saveState } from "../Utils/Store.js"
 
 
 class JobsService {
@@ -17,7 +18,20 @@ class JobsService {
 
     }
 
+    setActiveJob(jobId){
+        const job = appState.jobs.find(c => c.id == jobId)
+        if(!job){
+            throw new Error("gosh be jolly")
+        }
+        appState.job = job
+    }
 
+    createJob(formData){
+        let job = new Job(formData)
+        appState.emit('jobs')
+        saveState('jobs', appState.jobs)
+
+    }
 
 }
 export const jobsService = new JobsService()

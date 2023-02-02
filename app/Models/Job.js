@@ -47,7 +47,7 @@ export class Job {
             <label for="pay">Pay</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="number" class="form-control" name="sqft" required min="1" max="9999">
+            <input type="number" class="form-control" name="phone" required min="1">
             <label for="phone">Phone</label>
         </div>
         <div class="form-floating mb-3">
