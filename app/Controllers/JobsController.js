@@ -33,7 +33,7 @@ export class JobsController {
     setText('listingFormLabel', '🪦 Dig up a new Job')
     
 
-    setHTML('the-actual-form', Job.jobForm)
+    setHTML('the-actual-form', Job.jobForm())
     _drawJobs()
     console.log('ahoy')
   }

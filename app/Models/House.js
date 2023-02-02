@@ -36,7 +36,7 @@ export class House {
         `
     }
 
-    static HouseForm () {
+    static HouseForm() {
         
         return /*html*/`
     <form onsubmit="app.housesController.handleFormSubmit()">

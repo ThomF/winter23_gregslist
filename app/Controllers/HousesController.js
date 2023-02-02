@@ -32,7 +32,7 @@ export class HousesController {
     setText('add-listing-button', 'New House')
     setHTML('listingFormLabel', 'cheapest foundations here!')
 
-    setHTML('the-actual-form', House.HouseForm)
+    setHTML('the-actual-form', House.HouseForm())
 
     _drawHouses()
   }
