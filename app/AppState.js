@@ -17,12 +17,12 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/House').House[]} */
   houses = loadState('houses', [House])
-  /** @type {import('./Models/House').House} */
+  /** @type {import('./Models/House').House | null} */
   house = null
 
     /** @type {import('./Models/Job').Job[]} */
     jobs = loadState('jobs', [Job])
-    /** @type {import('./Models/Job').Job} */
+    /** @type {import('./Models/Job').Job | null} */
     job = null
 }
 

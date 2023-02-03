@@ -28,6 +28,8 @@ class JobsService {
 
     createJob(formData){
         let job = new Job(formData)
+
+        appState.jobs.push(job)
         appState.emit('jobs')
         saveState('jobs', appState.jobs)
 

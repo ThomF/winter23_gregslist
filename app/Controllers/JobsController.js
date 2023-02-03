@@ -28,14 +28,14 @@ export class JobsController {
   }
 
   show() {
+    console.log('ahoy')
     
     setText('add-listing-button', 'Bounties Available')
     setText('listingFormLabel', '🪦 Dig up a new Job')
     
 
-    setHTML('the-actual-form', Job.jobForm())
+    setHTML('the-actual-form', Job.JobForm)
     _drawJobs()
-    console.log('ahoy')
   }
 
     setActiveJob(jobId){

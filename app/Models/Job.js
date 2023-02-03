@@ -15,7 +15,7 @@ export class Job {
         return 
         `
         <div class="col-md-4 my-3">
-        <div class="card elevation-2 car" onclick="app.housesController.setActiveHouse('${this.id}')" data-bs-toggle="modal" data-bs-target="#listingModal">
+        <div class="card elevation-2 car" onclick="app.jobsController.setActiveJob('${this.id}')" data-bs-toggle="modal" data-bs-target="#listingModal">
             <img 
                 src="${this.imgUrl}"
                 class="rounded">
@@ -29,12 +29,12 @@ export class Job {
         return
         `
         <div>
-            <button class="btn btn-danger" data-bs-dismiss="modal" onclick="app.housesController.deleteHouse('${this.id}')">DELETE</button>
+            <button class="btn btn-danger" data-bs-dismiss="modal" onclick="app.jobsController.deleteJob('${this.id}')">DELETE</button>
         </div>
         `
     }
 
-    static jobForm(){
+    static JobForm() {
         return /*HTML */
         `
         <form onsubmit="app.jobsController.handleFormSubmit()">
