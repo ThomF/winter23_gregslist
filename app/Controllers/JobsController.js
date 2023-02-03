@@ -8,7 +8,7 @@ import { getFormData } from "../Utils/FormHandler.js"
 
 function _drawJobs(){
   let template = ''
-  appState.jobs.forEach(c => template += c.jobCardTemplate);
+  appState.jobs.forEach(c => template += c.JobCardTemplate);
   setHTML('listings', template)
 }
 

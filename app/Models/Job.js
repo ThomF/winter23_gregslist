@@ -11,7 +11,7 @@ export class Job {
         this.imgUrl = data.imgUrl
     }
 
-    get jobCardTemplate(){
+    get JobCardTemplate(){
         return 
         `
         <div class="col-md-4 my-3">
